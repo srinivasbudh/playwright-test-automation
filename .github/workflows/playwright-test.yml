@@ -1,7 +1,6 @@
 name: Playwright Test Automation run
 
-on: [push, pull_request]
-
+on: [ push, workflow_dispatch ]
 jobs:
   test:
     runs-on: ubuntu-latest
