@@ -28,7 +28,7 @@ test.describe('Validate possibility of searching for the Star Wars people', () =
         // Check the response status
         const isApiAvailable = response.ok;
     
-        if (isApiAvailable) {
+        if (!isApiAvailable) {
             await context.route('**/api/people/**', (route, request) => {
                 const searchParam = new URL(request.url()).searchParams.get('search');
     
